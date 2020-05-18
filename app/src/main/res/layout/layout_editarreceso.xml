@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGrayDark">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/rldatos"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_weight="0.8">
+
+        <TableLayout
+            android:id="@+id/tableEditarDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TextView
+                android:id="@+id/tvSubtitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="RECESO LABORAL"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="0.5"
+                    android:text="MOTIVO:"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:id="@+id/spEditReceso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:popupBackground="@drawable/style_spinner_background"
+                    android:layout_column="1"
+                    android:layout_weight="1.5" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="0.3"
+                    android:text="INICIO: "
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/edEditInicioReceso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_weight="0.7"
+                    style="@style/MyEditTextstyle"
+                    android:focusable="false"
+                    android:layout_marginRight="15dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_weight="0.3"
+                    android:text="FIN: "
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/edEditFinReceso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:layout_weight="0.7"
+                    style="@style/MyEditTextstyle"
+                    android:focusable="false" />
+            </TableRow>
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="0.3"
+                    android:text="OBSERVACIONES: "
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/edEditObsReceso"
+                    android:layout_width="0dp"
+                    android:layout_height="150px"
+                    android:layout_column="1"
+                    android:layout_weight="0.7"
+                    style="@style/MyEditTextstyle"
+                    android:inputType="text|textMultiLine"
+                    android:maxLength="200"
+                    android:gravity="left"
+                    android:maxLines="6"/>
+            </TableRow>
+        </TableLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnGuardarEdicionReceso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="16dp"
+            android:src="@android:drawable/ic_menu_save" />
+
+    </LinearLayout>
+
+</LinearLayout>

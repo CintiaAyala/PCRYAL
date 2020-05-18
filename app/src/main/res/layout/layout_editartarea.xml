@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGrayDark">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/rlEdiciondatos"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_weight="0.8">
+
+        <TableLayout
+            android:id="@+id/tableDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TextView
+                android:id="@+id/tvSubtitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="TAREAS ALMACEN"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="0.5"
+                    android:text="MOTIVO:"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:id="@+id/spEditTarea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:popupBackground="@drawable/style_spinner_background"
+                    android:layout_column="1"
+                    android:layout_weight="1.5" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:id="@+id/rowEditMateriales"
+                android:layout_marginTop="35dp">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:id="@+id/btnEditMateriales"
+                    android:background="@drawable/style_button"
+                    android:text="Editar materiales"
+                    android:textSize="14dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="0.3"
+                    android:text="INICIO: "
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/edEditInicioTarea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_weight="0.7"
+                    style="@style/MyEditTextstyle"
+                    android:focusable="false"
+                    android:layout_marginRight="15dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_weight="0.3"
+                    android:text="FIN: "
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/edEditFinTarea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:layout_weight="0.7"
+                    style="@style/MyEditTextstyle"
+                    android:focusable="false" />
+            </TableRow>
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="0.3"
+                    android:text="OBSERVACIONES: "
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/edEditObsTarea"
+                    android:layout_width="0dp"
+                    android:layout_height="150px"
+                    android:layout_column="1"
+                    android:layout_weight="0.7"
+                    style="@style/MyEditTextstyle"
+                    android:inputType="text|textMultiLine"
+                    android:maxLength="200"
+                    android:gravity="left"
+                    android:maxLines="6"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnGuardarEdicionTarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="30dp"
+        android:src="@android:drawable/ic_menu_save" />
+</LinearLayout>

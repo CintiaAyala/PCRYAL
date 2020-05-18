@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayDark"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+    <TableLayout
+        android:id="@+id/tableF1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+        <TextView
+            android:id="@+id/section_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATOS DEL MOTOR"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:text="Tipo de OT:"
+                android:textSize="16dp"
+                android:layout_weight="0.5"/>
+
+            <Spinner
+                android:id="@+id/spTipoOt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView1"
+                android:popupBackground="@drawable/style_spinner_background"
+                android:layout_column="1"
+                android:layout_weight="1.5" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Inicio OT"
+                android:textSize="16dp"
+                android:layout_weight="0.4"/>
+
+            <EditText
+                android:id="@+id/edHrInicioOt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                style="@style/MyEditTextstyle"
+                android:layout_weight="0.4"
+                android:layout_alignBottom="@+id/textView5"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:textSize="16dp"
+                android:layout_weight="0.5"
+                android:layout_alignTop="@+id/textView5" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_column="3"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="MM"
+                android:textSize="16dp"
+                android:layout_weight="0.4"/>
+
+            <EditText
+                android:id="@+id/edMM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="MM212"
+                android:autoSizeTextType="uniform"
+                style="@style/MyEditTextstyle"
+                android:inputType="none"
+                android:enabled="false"
+                android:layout_weight="0.4"
+                android:layout_alignBottom="@+id/textView3"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:textSize="16dp"
+                android:layout_weight="0.4"
+                android:layout_alignTop="@+id/textView3"
+                android:text="Pozo" />
+
+            <EditText
+                android:id="@+id/edPozo"
+                android:layout_width="0dp"
+                android:layout_column="3"
+                style="@style/MyEditTextstyle"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:layout_alignBottom="@+id/textView4"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MEDICIONES"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_weight="0.5"
+            android:textSize="16dp"
+            android:text="Presión" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_column="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/edPresion"
+            android:inputType="number"
+            android:layout_weight="0.3"
+            android:layout_marginRight="10dp"
+            style="@style/MyEditTextstyle"
+            android:layout_alignBottom="@+id/textView6"/>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_alignBottom="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_weight="0.5"
+            android:textSize="16dp"
+            android:text="Temperatura" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_column="3"
+            android:layout_height="wrap_content"
+            android:id="@+id/edTemp"
+            android:inputType="number"
+            android:layout_weight="0.3"
+            style="@style/MyEditTextstyle"
+            android:layout_alignBottom="@+id/textView7"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_weight="0.5"
+                android:autoSizeTextType="uniform"
+                android:text="Golpes por min" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_column="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/edGolpes"
+            style="@style/MyEditTextstyle"
+            android:inputType="number"
+            android:layout_weight="0.3"
+            android:layout_marginRight="10dp"
+            android:layout_alignBottom="@+id/textView8"/>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/textView8"
+                android:layout_column="2"
+                android:layout_weight="0.5"
+                android:autoSizeTextType="uniform"
+                android:text="Presion Gas Combustible" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_column="3"
+            android:layout_height="wrap_content"
+            android:id="@+id/edPGC"
+            android:inputType="number"
+            android:layout_weight="0.3"
+            style="@style/MyEditTextstyle"
+            android:layout_alignBottom="@+id/textView9"/>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnFotos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="50dp"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lvFotos"
+            android:background="@drawable/style_spinner_background">
+        </ListView>
+    </LinearLayout>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="75dp"
+        android:layout_marginRight="30dp"
+        android:src="@android:drawable/ic_menu_send"/>
+
+</LinearLayout>
